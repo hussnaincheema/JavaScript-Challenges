@@ -1,0 +1,52 @@
+:root {
+    --white: #fff;
+    --boxBackground: steelblue;
+    --blackColor: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.box {
+    background-color: var(--boxBackground);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: var(--blackColor);
+    transform: translateX(200px);
+    transition: transform 0.4s ease; 
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-200px);
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+.box h1 {
+    font-size: 40px;
+}
