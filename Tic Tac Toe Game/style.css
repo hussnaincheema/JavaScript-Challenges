@@ -1,0 +1,128 @@
+:root{
+    --teaGreen: #548687;
+    --white: #fff;
+    --black: #000;
+    --red: #b0413e;
+    --blackish: #191913;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--teaGreen);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 90vw;
+    max-width: 600px;
+}
+
+.box {
+    background-color: var(--white);
+    border-radius: 10px;
+    border: none;
+    aspect-ratio: 1 / 1; 
+    font-size: 5rem;
+    color: var(--red);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: var(--blackish);
+    color: var(--white);
+    border-radius: 1rem;
+    border: none;
+    margin-top: 2rem;
+}
+
+#new_btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: var(--blackish);
+    color: var(--white);
+    border-radius: 1rem;
+    border: none;
+    margin-top: 2rem;
+}
+
+#msg{
+    color: var(--white);
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.msg_container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .box {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .box {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 690px) {
+    #msg{
+        font-size: 3rem;
+        font-weight: 800;
+    }
+}
+
+@media (max-width: 385px) {
+    #msg{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
