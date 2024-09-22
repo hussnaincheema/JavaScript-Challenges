@@ -1,0 +1,45 @@
+:root{
+    --white: #fff;
+    --background-color: #8e44ad;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Roboto Mono', sans-serif;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.container span{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.counter{
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+@media (max-width: 550px) {
+    body{
+        flex-direction: column;
+    }
+}
